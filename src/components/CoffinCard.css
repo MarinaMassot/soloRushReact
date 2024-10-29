@@ -22,7 +22,36 @@ figcaption.subtitle {
     height: 1Orem;
 }
 
-p.description {
+@keyframes glowing {
+    0% {
+      background-color: rgb(85, 1, 1);
+      box-shadow: 0 0 3px rgb(85, 1, 1);
+    }
+    50% {
+      background-color: rgb(165, 3, 3);
+      box-shadow: 0 0 10px rgb(165, 3, 3);
+    }
+    100% {
+      background-color: red;
+      box-shadow: 0 0 3px red;
+    }
+  }
+
+button.choose-me {
+    background-color: #1c87c9;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+    border: none;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    animation: glowing 1300ms infinite;
+    font-size: 1.5em;
+}
+
+div.description {
     margin: 1rem;
     height: 10rem;
 }

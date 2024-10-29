@@ -1,8 +1,20 @@
+interface CoffinCardPropsType {
+    coffin: {
+        id: number;
+        name: string;
+        type: string;
+        price: number;
+        description: string;
+        imageUrl: string;
+    } 
+
+}
+
 import "./CoffinCard.css";
 import { useState } from "react";
 
 
-function CoffinCard({ coffin }) {
+function CoffinCard({ coffin } : CoffinCardPropsType ) {
 const[showDescription, setShowDescritption] = useState (false);
 
     return (
@@ -14,11 +26,11 @@ const[showDescription, setShowDescritption] = useState (false);
                 </figcaption>
             </figure>
             <p className="price">{coffin.price}€</p>
-            <button type="button" onClick={ 
+            <button className="choose-me" type="button" onClick={ 
             () => setShowDescritption(!showDescription)
         }
         >Should you choose me ⚰️ ?</button>
-        {(showDescription) ? <p className="description">{coffin.description}</p> : null}
+        {(showDescription) ? <div className="description">{coffin.description}</div> : null}
         </div>
     )
 }
