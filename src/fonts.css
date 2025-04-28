@@ -3,9 +3,9 @@
 h1.title {
     font-family: "Creepster", system-ui;
     font-weight: 400;
-    font-size: 4.5rem;
+    font-size: 5rem;
     font-style: normal;
-    color: red;
+    color: rgb(255, 19, 19);
 }
 
 figcaption.subtitle {
@@ -18,13 +18,14 @@ figcaption.subtitle {
 
 input#coffin-search{
     font-family: "Creepster", system-ui;
-    color:red
+    color:red;
+    font-size: 1.6rem;
 }
 
 .coffin-card {
     font-family: "Poppins", system-ui;
     font-weight: 100;
-    font-style: 1rem;
+    font-size: 1rem;
     color: black;   
 }
 

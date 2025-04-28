@@ -1,3 +1,6 @@
+import "./CoffinCard.css";
+import { useState } from "react";
+
 interface CoffinCardPropsType {
     coffin: {
         id: number;
@@ -7,12 +10,7 @@ interface CoffinCardPropsType {
         description: string;
         imageUrl: string;
     } 
-
 }
-
-import "./CoffinCard.css";
-import { useState } from "react";
-
 
 function CoffinCard({ coffin } : CoffinCardPropsType ) {
 const[showDescription, setShowDescritption] = useState (false);
@@ -20,7 +18,6 @@ const[showDescription, setShowDescritption] = useState (false);
     return (
         <div key={coffin.id} className="coffin-card">
             <figure>
-                <img className="coffin-image" src={coffin.imageUrl} alt={coffin.name} />
                 <figcaption className="subtitle">
                     {coffin.name} {coffin.type}
                 </figcaption>
@@ -30,7 +27,11 @@ const[showDescription, setShowDescritption] = useState (false);
             () => setShowDescritption(!showDescription)
         }
         >Should you choose me ⚰️ ?</button>
-        {(showDescription) ? <div className="description">{coffin.description}</div> : null}
+        {(showDescription) ?
+            <div className="description">
+                {coffin.description} 
+                <a href="https://french.alibaba.com/f/cercueil-pas-cher.html"><button type="button">Buy me</button></a>
+            </div> : null}
         </div>
     )
 }

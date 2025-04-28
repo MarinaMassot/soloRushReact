@@ -9,13 +9,26 @@ div.site-container {
 div.search-block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
+
+}
+
+h1.title {
+  width: 45%;
+}
+
+input#coffin-search {
+  width: 40%;
+  height: 4rem;
+  border-radius: 1%;
+  box-shadow: 0.4rem 0.4rem 0rem black;
+  background-color: rgb(183, 183, 183);
 }
 
 img.header-image {
 width: 25%;
-opacity: 0.5;
+opacity: 0.7;
 border-radius: 1%;
 }
 
@@ -29,12 +42,4 @@ div.coffin-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-input#coffin-search{
-  width: 40%;
-  height: 4rem;
-  border-radius: 1%;
-  box-shadow: 0.4rem 0.4rem 0rem black;
-  background-color: rgb(183, 183, 183);
 }
